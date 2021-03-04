@@ -105,7 +105,7 @@ fun CountDownEntry() {
                     .clickable {
                         if (entryState.value != "") isCountDownOn.value = !isCountDownOn.value
                         if (isCountDownOn.value) {
-                            if (entryState.value.toFloat() != currentEntry) {
+                            if (entryState.value.toFloat() != currentEntry || countDownState.countDownValueState.value.roundToInt() == 0) {
                                 currentEntry = entryState.value.toFloat()
                                 countDownState.countDownValueState.value =
                                     currentEntry
