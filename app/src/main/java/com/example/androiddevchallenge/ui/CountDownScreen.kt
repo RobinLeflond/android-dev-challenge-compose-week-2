@@ -103,7 +103,7 @@ fun CountDownEntry() {
             Image(
                 modifier = Modifier
                     .clickable {
-                        isCountDownOn.value = !isCountDownOn.value
+                        if (entryState.value != "") isCountDownOn.value = !isCountDownOn.value
                         if (isCountDownOn.value) {
                             if (entryState.value.toFloat() != currentEntry) {
                                 currentEntry = entryState.value.toFloat()
